@@ -14,6 +14,9 @@ my $builder = Module::Build->new(
         'Params::Validate' => 1.0,
         'Carp'       => 1.25,
     },
+    configure_requires => {
+        'Module::Build' => 0.38
+    },
     add_to_cleanup      => [ 'Array-GroupBy-*' ],
 );
 

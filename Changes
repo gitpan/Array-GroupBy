@@ -1,5 +1,9 @@
 Revision history for Array-GroupBy
 
+0.0.2  Wed Jun 20 2012
+       Put perlcriticrc-conway into t/ and editted t/perlcritic.t
+       to use it, and cleaned up the GroupBy.pm code
+
 0.0.1  Mon Mar  5 17:27:29 2012
        Initial release.
 

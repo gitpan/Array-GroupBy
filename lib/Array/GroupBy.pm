@@ -7,7 +7,7 @@ use 5.008_008;
 
 use List::Util qw(max);
 
-use version; our $VERSION = qv('0.0.1');
+use version; our $VERSION = qv('0.0.2');
 
 use base qw( Exporter );
 our @EXPORT = qw( igroup_by );
@@ -45,8 +45,8 @@ sub igroup_by {
 
     push @result, $previous_line;
 
-    while ($line = $data->[$i++]) { 
-      last 
+    while ($line = $data->[$i++]) {
+      last
         unless $compare->($previous_line, $line, $args);
 
       push @result, $line;
@@ -59,8 +59,8 @@ sub igroup_by {
 }
 
 ########################################
-sub str_row_equal { _row_equal( sub { $_[0] eq $_[1] }, @_ ) }
-sub num_row_equal { _row_equal( sub { $_[0] == $_[1] }, @_ ) }
+sub str_row_equal { return _row_equal( sub { $_[0] eq $_[1] }, @_ ) }
+sub num_row_equal { return _row_equal( sub { $_[0] == $_[1] }, @_ ) }
 
 ########################################
 sub _row_equal {
@@ -384,6 +384,7 @@ strings. We assume all patients have unique (First, Last) name pairs.
                 compare => \&str_row_equal,
                 args    => [ 0, 1 ],
                       );
+
   while (my $subset = $iter->()) {
 
     my @visits = map { Visit->new(
@@ -491,7 +492,7 @@ SUCH DAMAGES.
 ##### SUBROUTINE INDEX #####
 #                          #
 #   gen by index_subs.pl   #
-#   on 17 Jun 2012 11:39   #
+#   on 20 Jun 2012 22:17   #
 #                          #
 ############################
 
