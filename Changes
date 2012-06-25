@@ -1,5 +1,8 @@
 Revision history for Array-GroupBy
 
+0.0.4  Mon Jun 25 2012
+       Forgot to clean usage of Test::Exception in t/2.t
+
 0.0.3  Sun Jun 24 2012
        Cleaned up use of Test::Exception and MooseX::StrictConstructor,
        skipping if not installed.

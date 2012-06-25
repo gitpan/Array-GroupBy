@@ -1,4 +1,4 @@
-Array-GroupBy version 0.0.3
+Array-GroupBy version 0.0.4
 
 Array::GroupBy supplies igroup_by() which returns an iterator which, when
 called, returns sub-arrays of a given array which are "equal" as determined by
