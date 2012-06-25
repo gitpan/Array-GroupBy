@@ -5,7 +5,6 @@ use strict;
 use Array::GroupBy qw(str_row_equal num_row_equal);
 
 use Test::More tests => 22;
-use Test::Exception;
 
 my $a1 = ['a', 'b', 'c'];
 my $a2 = ['a', 'b', 'c'];

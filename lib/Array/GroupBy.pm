@@ -7,7 +7,7 @@ use 5.008_008;
 
 use List::Util qw(max);
 
-use version; our $VERSION = qv('0.0.2');
+use version; our $VERSION = qv('0.0.3');
 
 use base qw( Exporter );
 our @EXPORT = qw( igroup_by );
@@ -492,7 +492,7 @@ SUCH DAMAGES.
 ##### SUBROUTINE INDEX #####
 #                          #
 #   gen by index_subs.pl   #
-#   on 20 Jun 2012 22:17   #
+#   on 24 Jun 2012 20:45   #
 #                          #
 ############################
 
